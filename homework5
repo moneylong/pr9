@@ -1,0 +1,7 @@
+# Исходный список чисел
+numbers = [1, 3, 2, 5, 4, 6, 8]
+
+# Выводим элементы списка, которые больше предыдущего элемента
+result = [numbers[i] for i in range(1, len(numbers)) if numbers[i] > numbers[i - 1]]
+
+print(result)
