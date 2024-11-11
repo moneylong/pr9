@@ -1,0 +1,18 @@
+# Инициализация пустого списка для хранения введенных чисел
+numbers = []
+
+# Цикл для ввода чисел
+while True:
+    user_input = input("Введите число (или 'end' для завершения): ")
+    if user_input.lower() == 'end':
+        break
+    try:
+        # Преобразуем введенное значение в число и добавляем его в список
+        number = int(user_input)
+        numbers.append(number)
+    except ValueError:
+        print("Пожалуйста, введите корректное число.")
+
+# Фильтрация и вывод нечетных чисел из списка
+odd_numbers = [num for num in numbers if num % 2 != 0]
+print("Нечетные числа в списке:", odd_numbers)
