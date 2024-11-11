@@ -1,0 +1,9 @@
+def cyclic_shift_right(arr):
+    if not arr:  # Проверка на пустой список
+        return arr
+    return [arr[-1]] + arr[:-1]
+
+# Пример использования
+numbers = [1, 2, 3, 4, 5]
+shifted_numbers = cyclic_shift_right(numbers)
+print(shifted_numbers)
